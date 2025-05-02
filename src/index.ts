@@ -4,15 +4,11 @@
  */
 
 // Export animation functions
-export * from './animations/fade';
-export * from './animations/slide';
+export * from './fx/Fade/Fade';
+export * from './fx/Slide/Slide';
 
 // Export utility functions
 export * from './utils/motion-adapter';
-
-// Export example components
-export * from './examples/FadeInBox';
-export * from './examples/SlideInBox';
 
 // Basic hello function (can be removed in future)
 export const hello = (): string => {

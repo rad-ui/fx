@@ -48,7 +48,6 @@
     "vitest": "^3.1.2"
   },
   "dependencies": {
-    "framer-motion": "^12.9.4",
     "motion": "^12.9.4"
   },
   "peerDependencies": {

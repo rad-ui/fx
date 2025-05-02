@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { createFadeAnimation, createSlideAnimation } from '../index';
+import { createFadeAnimation } from '../../fx/Fade/Fade';
+import { createSlideAnimation } from '../../fx/Slide/Slide';
 import type { Meta, StoryObj } from '@storybook/react';
 
 interface AnimationDemoProps {
@@ -81,7 +82,7 @@ const AnimationDemo: React.FC<AnimationDemoProps> = ({
 };
 
 const meta = {
-    title: 'Animations/Core Utilities',
+    title: 'FX/Combined Animations',
     component: AnimationDemo,
     parameters: {
         layout: 'centered',
