@@ -1,0 +1,39 @@
+{
+  "name": "rad-ui-fx",
+  "version": "0.1.0",
+  "description": "A UI effects library for modern web applications",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "prepare": "npm run clean && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ui",
+    "effects",
+    "animation",
+    "typescript",
+    "react"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^18.2.61",
+    "@types/react-dom": "^18.2.19",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "framer-motion": "^12.9.4",
+    "motion": "^12.9.4"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  }
+}
