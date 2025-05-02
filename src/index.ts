@@ -10,6 +10,9 @@ export * from './fx/Slide/Slide';
 // Export utility functions
 export * from './utils/motion-adapter';
 
+// Export story components
+export * from './fx/StoryWrapper/StoryWrapper';
+
 // Basic hello function (can be removed in future)
 export const hello = (): string => {
   return 'Hello from rad-ui-fx!';

@@ -1,6 +1,17 @@
-import type { Preview } from '@storybook/react'
+import React from 'react';
+import { StoryWrapper } from '../src/fx/StoryWrapper/StoryWrapper';
+import "@radui/ui/themes/default.css";
+import "./main.css";
 
-const preview: Preview = {
+// Decorator function to wrap all stories with the StoryWrapper component
+const withStoryWrapper = (Story) => (
+  <StoryWrapper>
+    <Story />
+  </StoryWrapper>
+);
+
+const preview = {
+  decorators: [withStoryWrapper],
   parameters: {
     actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
@@ -34,10 +45,10 @@ const preview: Preview = {
     },
     options: {
       storySort: {
-        order: ['Introduction', 'Animations', ['Core Utilities', '*']],
+        order: ['Introduction', 'FX', ['Combined Animations', 'Fade', 'Slide', '*']],
       },
     },
   },
 };
 
-export default preview;
+export default preview; 

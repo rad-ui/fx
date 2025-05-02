@@ -3,6 +3,8 @@ import { motion } from 'framer-motion'; // Could also use 'motion' package
 import { createTransition } from '../../utils/motion-adapter';
 import { SlideDirection, SlideOptions, SlideProps } from './Slide.types';
 
+
+
 /**
  * Creates slide animation variants
  * 
@@ -59,9 +61,8 @@ export const Slide: React.FC<SlideProps> = ({
     distance = 50,
     duration = 0.5,
     delay = 0,
-    className = '',
     easing = 'easeInOut',
-    style = {},
+    ...props
 }) => {
     const slideVariants = createSlideAnimation({
         direction,
@@ -76,10 +77,9 @@ export const Slide: React.FC<SlideProps> = ({
             animate="visible"
             variants={slideVariants}
             transition={{ delay }}
-            className={`rad-slide ${className}`}
-            style={style}
+            {...props}
         >
-            {children}
+            <div>{children}</div>
         </motion.div>
     );
 }; 

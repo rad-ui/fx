@@ -3,6 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Slide, createSlideAnimation } from './Slide';
 import { motion } from 'framer-motion';
 import { SlideProps } from './Slide.types';
+import Heading from "@radui/ui/Heading"
 
 const meta = {
     title: 'FX/Slide',
@@ -29,10 +30,18 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
+const Card = () => {
+    return (
+        <div style={{ padding: '4px 20px', backgroundColor: "var(--rad-ui-color-gray-400)", borderRadius: '8px' }}>
+            <Heading style={{ color: "var(--rad-ui-color-gray-1000)" }}>Meira and Anoushkha</Heading>
+        </div>
+    )
+}
+
 // Basic Slide component stories
 export const FromBottom: Story = {
     args: {
-        children: <div style={{ padding: '20px', backgroundColor: '#f0f0f0', borderRadius: '8px' }}>Slide In From Bottom</div>,
+        children: <Card />,
         direction: 'up',
         distance: 50,
         duration: 0.5,
@@ -42,7 +51,7 @@ export const FromBottom: Story = {
 
 export const FromTop: Story = {
     args: {
-        children: <div style={{ padding: '20px', backgroundColor: '#f0f0f0', borderRadius: '8px' }}>Slide In From Top</div>,
+        children: <Card />,
         direction: 'down',
         distance: 50,
         duration: 0.5,
@@ -52,7 +61,7 @@ export const FromTop: Story = {
 
 export const FromLeft: Story = {
     args: {
-        children: <div style={{ padding: '20px', backgroundColor: '#f0f0f0', borderRadius: '8px' }}>Slide In From Left</div>,
+        children: <Card />,
         direction: 'left',
         distance: 50,
         duration: 0.5,
@@ -62,7 +71,7 @@ export const FromLeft: Story = {
 
 export const FromRight: Story = {
     args: {
-        children: <div style={{ padding: '20px', backgroundColor: '#f0f0f0', borderRadius: '8px' }}>Slide In From Right</div>,
+        children: <Card />,
         direction: 'right',
         distance: 50,
         duration: 0.5,
@@ -72,7 +81,7 @@ export const FromRight: Story = {
 
 export const LongDistance: Story = {
     args: {
-        children: <div style={{ padding: '20px', backgroundColor: '#f0f0f0', borderRadius: '8px' }}>Long Distance Slide</div>,
+        children: <Card />,
         direction: 'left',
         distance: 200,
         duration: 0.8,
@@ -82,7 +91,7 @@ export const LongDistance: Story = {
 
 export const SlowMotion: Story = {
     args: {
-        children: <div style={{ padding: '20px', backgroundColor: '#f0f0f0', borderRadius: '8px' }}>Slow Motion Slide</div>,
+        children: <Card />,
         direction: 'up',
         distance: 50,
         duration: 2,
