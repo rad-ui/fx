@@ -17,7 +17,6 @@ const meta = {
   parameters: {
     layout: 'centered',
   },
-  tags: ['autodocs'],
   argTypes: {
     direction: {
       control: 'select',
@@ -102,6 +101,16 @@ export const SlowMotion: Story = {
     distance: 50,
     duration: 2,
     delay: 0,
+  },
+};
+
+
+export const Delayed: Story = {
+  args: {
+    children: <Card />,
+    direction: 'up',
+    distance: 50,
+    delay: 1,
   },
 };
 

@@ -10,9 +10,9 @@ import { FadeOptions, FadeProps } from './Fade.types';
  * @returns Variants object for fade animations
  */
 export const createFadeAnimation = (options: FadeOptions = {}) => {
-  const { duration = 0.5, initialOpacity = 0, finalOpacity = 1, easing = 'easeInOut' } = options;
+  const { duration = 0.5, initialOpacity = 0, finalOpacity = 1, easing = 'easeInOut', delay = 0 } = options;
 
-  const transition = createTransition({ duration, ease: easing });
+  const transition = createTransition({ duration, ease: easing, delay });
 
   return {
     hidden: {
@@ -44,6 +44,7 @@ export const Fade: React.FC<FadeProps> = ({
     initialOpacity,
     finalOpacity,
     easing,
+    delay,
   });
 
   return (

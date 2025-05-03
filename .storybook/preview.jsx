@@ -38,7 +38,7 @@ const preview = {
       ],
     },
     docs: {
-      toc: true,
+      toc: false,
       source: {
         excludeDecorators: true,
       },

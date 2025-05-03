@@ -9,7 +9,6 @@ const meta = {
   parameters: {
     layout: 'centered',
   },
-  tags: ['autodocs'],
   argTypes: {
     duration: { control: { type: 'range', min: 0.1, max: 3, step: 0.1 } },
     delay: { control: { type: 'range', min: 0, max: 2, step: 0.1 } },
@@ -58,7 +57,7 @@ export const DelayedFade: Story = {
       </div>
     ),
     duration: 0.5,
-    delay: 1,
+    delay: 2,
   },
 };
 
