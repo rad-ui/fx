@@ -1,7 +1,6 @@
 import React from 'react';
-import { StoryObj } from '@storybook/react';
+import type { Meta } from '@storybook/react';
 import StoryWrapper from './';
-
 
 export default {
   title: 'FX/StoryWrapper',
@@ -24,4 +23,3 @@ export default {
     ),
   ],
 };
-

@@ -10,12 +10,7 @@ import { SlideOptions, SlideProps } from './Slide.types';
  * @returns Variants object for slide animations
  */
 export const createSlideAnimation = (options: SlideOptions = {}) => {
-  const {
-    direction = 'up',
-    distance = 50,
-    duration = 0.5,
-    easing = 'easeInOut',
-  } = options;
+  const { direction = 'up', distance = 50, duration = 0.5, easing = 'easeInOut' } = options;
 
   const getDirectionalProperties = (): { x?: number; y?: number } => {
     switch (direction) {

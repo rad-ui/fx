@@ -39,7 +39,7 @@ type Story = StoryObj<typeof meta>;
 const Card = () => {
   return (
     <div style={{ padding: '4px 20px', backgroundColor: '#f0f0f0', borderRadius: '8px' }}>
-      <Heading style={{ color: '#333' }}>The Motion Design Library You've Been Waiting For</Heading>
+      <Heading style={{ color: '#333' }}>The Motion Design Library You&apos;ve Been Waiting For</Heading>
     </div>
   );
 };
@@ -122,7 +122,9 @@ export const SlideUtility: StoryObj = {
       };
 
       return (
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '20px' }}>
+        <div
+          style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '20px' }}
+        >
           <motion.div
             key={key}
             initial="hidden"
