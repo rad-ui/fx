@@ -21,9 +21,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Enhanced README with better organization and documentation
 - Fixed linting errors in story files
 - Optimized code formatting across all files
+- Simplified project structure by removing test frameworks
 
 ### Removed
 - Removed index.ts in favor of direct imports
+- Removed Playwright and Vitest dependencies to simplify development setup
+- Removed unnecessary test configurations
 
 ## [0.1.0] - 2023-07-01
 
