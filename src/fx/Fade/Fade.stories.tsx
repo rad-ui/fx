@@ -1,8 +1,7 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { Fade, createFadeAnimation } from './Fade';
+import Fade, { createFadeAnimation, FadeProps } from './';
 import { motion } from 'framer-motion';
-import { FadeProps } from './Fade.types';
 
 const meta = {
     title: 'FX/Fade',

@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { Slide, createSlideAnimation } from './Slide';
+import Slide, { createSlideAnimation, SlideProps } from './';
 import { motion } from 'framer-motion';
-import { SlideProps } from './Slide.types';
-import Heading from "@radui/ui/Heading"
+
+interface HeadingProps {
+    children: ReactNode;
+    style?: React.CSSProperties;
+}
+
+// Mock Heading component for Storybook
+const Heading: React.FC<HeadingProps> = ({ children, style }) => (
+    <h2 style={style}>{children}</h2>
+);
 
 const meta = {
     title: 'FX/Slide',
@@ -32,8 +40,8 @@ type Story = StoryObj<typeof meta>;
 
 const Card = () => {
     return (
-        <div style={{ padding: '4px 20px', backgroundColor: "var(--rad-ui-color-gray-400)", borderRadius: '8px' }}>
-            <Heading style={{ color: "var(--rad-ui-color-gray-1000)" }}>Meira and Anoushkha</Heading>
+        <div style={{ padding: '4px 20px', backgroundColor: "#f0f0f0", borderRadius: '8px' }}>
+            <Heading style={{ color: "#333" }}>Meira and Anoushkha</Heading>
         </div>
     )
 }

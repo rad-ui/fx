@@ -1,13 +1,38 @@
 {
-  "name": "rad-ui-fx",
+  "name": "@radui/fx",
   "version": "0.1.0",
   "description": "A UI effects library for modern web applications",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
+  "exports": {
+    "./Fade": {
+      "types": "./dist/fx/Fade/index.d.ts",
+      "import": "./dist/fx/Fade/index.js",
+      "require": "./dist/fx/Fade/index.js"
+    },
+    "./Slide": {
+      "types": "./dist/fx/Slide/index.d.ts",
+      "import": "./dist/fx/Slide/index.js",
+      "require": "./dist/fx/Slide/index.js"
+    },
+    "./StoryWrapper": {
+      "types": "./dist/fx/StoryWrapper/index.d.ts",
+      "import": "./dist/fx/StoryWrapper/index.js",
+      "require": "./dist/fx/StoryWrapper/index.js"
+    },
+    "./utils/motion-adapter": {
+      "types": "./dist/utils/motion-adapter.d.ts",
+      "import": "./dist/utils/motion-adapter.js",
+      "require": "./dist/utils/motion-adapter.js"
+    },
+    "./version": {
+      "types": "./dist/version.d.ts",
+      "import": "./dist/version.js",
+      "require": "./dist/version.js"
+    }
+  },
+  "sideEffects": false,
   "scripts": {
     "build": "tsc",
     "clean": "rm -rf dist",

@@ -1,5 +1,5 @@
 import React from 'react';
-import { StoryWrapper } from '../src/fx/StoryWrapper/StoryWrapper';
+import StoryWrapper from '../src/fx/StoryWrapper';
 import "@radui/ui/themes/default.css";
 import "./main.css";
 
