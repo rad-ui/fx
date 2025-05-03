@@ -16,8 +16,8 @@ export type LibraryInfo = {
 export function getLibraryInfo(): LibraryInfo {
   return {
     name: '@radui/fx',
-    description: 'A UI effects library for modern web applications',
+    description: 'A UI effects library for modern web applications with optimized tree-shaking',
     version,
-    repository: 'https://github.com/your-repo/rad-ui-fx',
+    repository: 'https://github.com/yourusername/rad-ui-fx',
   };
 }

@@ -1,0 +1,52 @@
+# Source code
+/src
+
+# Build tools
+tsconfig.json
+babel.config.js
+rollup.config.js
+webpack.config.js
+.eslintrc.js
+.eslintignore
+.prettierrc
+.prettierignore
+
+# Development and CI
+.github
+.vscode
+.idea
+.travis.yml
+.gitlab-ci.yml
+.circleci
+.storybook
+storybook-static
+scripts
+vitest.config.ts
+
+# Tests
+__tests__
+__mocks__
+*.test.ts
+*.test.tsx
+*.spec.ts
+*.spec.tsx
+
+# Documentation
+docs
+examples
+demo
+*.md
+!README.md
+!LICENSE
+
+# Misc
+.DS_Store
+.env
+.env.*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+coverage
+node_modules
+*.log
+*.tgz 

@@ -1,7 +1,15 @@
 {
   "name": "@radui/fx",
-  "version": "0.0.1",
-  "description": "A UI effects library for modern web applications",
+  "version": "0.1.0",
+  "description": "A UI effects library for modern web applications with optimized tree-shaking",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rad-ui/fx"
+  },
+  "homepage": "https://rad-ui.com/fx",
+  "bugs": {
+    "url": "https://github.com/rad-ui/fx/issues"
+  },
   "files": [
     "dist"
   ],
@@ -42,7 +50,16 @@
     "sb": "npm run storybook",
     "build-storybook": "storybook build",
     "predeploy-storybook": "npm run build-storybook",
-    "deploy-storybook": "gh-pages -d storybook-static"
+    "deploy-storybook": "gh-pages -d storybook-static",
+    "prepublishOnly": "npm run lint && npm run build",
+    "release:patch": "npm version patch && node ./scripts/update-version.js && git add . && git commit -m \"chore: update version in version.ts\" && git push && git push --tags",
+    "release:minor": "npm version minor && node ./scripts/update-version.js && git add . && git commit -m \"chore: update version in version.ts\" && git push && git push --tags",
+    "release:major": "npm version major && node ./scripts/update-version.js && git add . && git commit -m \"chore: update version in version.ts\" && git push && git push --tags",
+    "publish:latest": "npm publish --access public",
+    "publish:beta": "npm publish --tag beta --access public",
+    "publish:alpha": "npm publish --tag alpha --access public",
+    "release": "npm run lint && npm run build && npm run release:patch && npm run publish:latest",
+    "release:beta": "npm run lint && npm run build && npm run release:patch && npm run publish:beta"
   },
   "keywords": [
     "ui",
