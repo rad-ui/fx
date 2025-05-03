@@ -1,6 +1,6 @@
 {
   "name": "@radui/fx",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A UI effects library for modern web applications with optimized tree-shaking",
   "repository": {
     "type": "git",
