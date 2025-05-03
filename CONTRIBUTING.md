@@ -82,12 +82,11 @@ Please document your code thoroughly:
 
 ## Testing
 
-We use Vitest for testing. Make sure your code is well-tested:
+Currently, the project does not have an automated testing framework. When adding new features:
 
-- Write unit tests for utility functions
-- Write component tests for React components
-- Aim for good test coverage
-- Run `npm test` to ensure your tests pass
+- Manually test your changes in Storybook
+- Ensure your components work as expected in different scenarios
+- Consider adding test coverage in the future
 
 ## Releasing
 
