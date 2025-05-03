@@ -8,6 +8,28 @@ A UI effects library for modern web applications with optimized imports.
 npm install @radui/fx
 ```
 
+## Import Pattern
+
+This library uses a direct import pattern exclusively. This means you need to import components directly from their paths rather than from the package root.
+
+### Why Direct Imports?
+
+1. **Better Tree-Shaking**: Direct imports enable bundlers to eliminate unused code more effectively, resulting in smaller bundle sizes.
+2. **Clear Dependencies**: They make it explicit what's being imported, enhancing code readability.
+3. **Improved Build Performance**: Direct imports can lead to faster build times by reducing unnecessary processing.
+4. **Type Safety**: TypeScript can more accurately track imports and exports with this pattern.
+
+### Example
+
+```jsx
+// ✅ Recommended - direct imports
+import Fade from '@radui/fx/Fade';
+import Slide from '@radui/fx/Slide';
+
+// ❌ Not supported - importing from the package root
+import { Fade, Slide } from '@radui/fx'; // This won't work!
+```
+
 ## Usage
 
 ### Direct imports (only supported method)
@@ -134,22 +156,53 @@ cd rad-ui-fx
 npm install
 ```
 
-### Build
+### Available Scripts
 
+#### Storybook
 ```bash
-npm run build
-```
-
-### Run Storybook
-
-```bash
+# Run Storybook development server
 npm run storybook
+# or the shorthand
+npm run sb
+
+# Build Storybook for deployment
+npm run build-storybook
+
+# Deploy Storybook to GitHub Pages
+npm run deploy-storybook
 ```
 
-### Test
-
+#### Development
 ```bash
+# Development with auto-recompile
+npm run dev
+
+# Build the library
+npm run build
+
+# Clean the build directory
+npm run clean
+```
+
+#### Testing
+```bash
+# Run tests once
 npm test
+
+# Run tests in watch mode
+npm run test:watch
+
+# Run tests with coverage
+npm run test:coverage
+```
+
+#### Linting
+```bash
+# Check for linting issues
+npm run lint
+
+# Fix linting issues automatically when possible
+npm run lint:fix
 ```
 
 ## License

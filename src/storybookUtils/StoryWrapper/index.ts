@@ -1,3 +1,3 @@
 import { StoryWrapper } from './StoryWrapper';
 
-export default StoryWrapper; 
+export default StoryWrapper;

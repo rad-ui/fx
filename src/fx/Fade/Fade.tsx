@@ -5,62 +5,57 @@ import { FadeOptions, FadeProps } from './Fade.types';
 
 /**
  * Creates fade animation variants for motion libraries
- * 
+ *
  * @param options - Options to customize the fade animation
  * @returns Variants object for fade animations
  */
 export const createFadeAnimation = (options: FadeOptions = {}) => {
-    const {
-        duration = 0.5,
-        initialOpacity = 0,
-        finalOpacity = 1,
-        easing = 'easeInOut',
-    } = options;
+  const { duration = 0.5, initialOpacity = 0, finalOpacity = 1, easing = 'easeInOut' } = options;
 
-    const transition = createTransition({ duration, ease: easing });
+  const transition = createTransition({ duration, ease: easing });
 
-    return {
-        hidden: {
-            opacity: initialOpacity,
-            transition,
-        },
-        visible: {
-            opacity: finalOpacity,
-            transition,
-        },
-    };
+  return {
+    hidden: {
+      opacity: initialOpacity,
+      transition,
+    },
+    visible: {
+      opacity: finalOpacity,
+      transition,
+    },
+  };
 };
 
 /**
  * A component that applies fade animation to its children
  */
 export const Fade: React.FC<FadeProps> = ({
-    children,
-    duration = 0.5,
-    delay = 0,
-    className = '',
-    initialOpacity = 0,
-    finalOpacity = 1,
-    easing = 'easeInOut',
-    style = {},
+  children,
+  duration = 0.5,
+  delay = 0,
+  className = '',
+  initialOpacity = 0,
+  finalOpacity = 1,
+  easing = 'easeInOut',
+  style = {},
 }) => {
-    const fadeVariants = createFadeAnimation({
-        duration,
-        initialOpacity,
-        finalOpacity,
-        easing
-    });
+  const fadeVariants = createFadeAnimation({
+    duration,
+    initialOpacity,
+    finalOpacity,
+    easing,
+  });
 
-    return (
-        <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={fadeVariants}
-            transition={{ delay }}
-            className={`rad-fade ${className}`}
-            style={style}
-        >
-            {children}
-        </motion.div>
-    );
-}; 
+  return (
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={fadeVariants}
+      transition={{ delay }}
+      className={`rad-fade ${className}`}
+      style={style}
+    >
+      {children}
+    </motion.div>
+  );
+};

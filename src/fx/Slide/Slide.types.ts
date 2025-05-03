@@ -1,5 +1,4 @@
 import React from 'react';
-import { Variants } from '../../utils/motion-adapter';
 
 /**
  * Direction for the slide animation
@@ -15,19 +14,19 @@ export interface SlideOptions {
    * @default 'up'
    */
   direction?: SlideDirection;
-  
+
   /**
    * Distance to slide in pixels
    * @default 50
    */
   distance?: number;
-  
+
   /**
    * Duration of the animation in seconds
    * @default 0.5
    */
   duration?: number;
-  
+
   /**
    * Easing function to use
    * @default "easeInOut"
@@ -89,4 +88,4 @@ export interface SlideProps {
    * Additional style properties to apply
    */
   style?: React.CSSProperties;
-} 
+}

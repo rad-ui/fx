@@ -18,6 +18,6 @@ export function getLibraryInfo(): LibraryInfo {
     name: '@radui/fx',
     description: 'A UI effects library for modern web applications',
     version,
-    repository: 'https://github.com/your-repo/rad-ui-fx'
+    repository: 'https://github.com/your-repo/rad-ui-fx',
   };
-} 
+}

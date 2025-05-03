@@ -8,7 +8,7 @@ export type Variants = FramerVariants;
 
 /**
  * Provides a consistent interface for animation variants across different motion libraries
- * 
+ *
  * @param variants - The animation variants object
  * @returns The same variants object, but typed safely for use with either library
  */
@@ -32,4 +32,4 @@ export function createTransition(options: {
     ease: options.ease,
     delay: options.delay,
   };
-} 
+}

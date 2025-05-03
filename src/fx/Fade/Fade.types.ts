@@ -1,5 +1,4 @@
 import React from 'react';
-import { Variants } from '../../utils/motion-adapter';
 
 /**
  * Options for customizing the fade animation
@@ -10,19 +9,19 @@ export interface FadeOptions {
    * @default 0.5
    */
   duration?: number;
-  
+
   /**
    * Initial opacity value
    * @default 0
    */
   initialOpacity?: number;
-  
+
   /**
    * Final opacity value
    * @default 1
    */
   finalOpacity?: number;
-  
+
   /**
    * Easing function to use
    * @default "easeInOut"
@@ -84,4 +83,4 @@ export interface FadeProps {
    * Additional style properties to apply
    */
   style?: React.CSSProperties;
-} 
+}
