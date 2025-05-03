@@ -39,7 +39,7 @@ type Story = StoryObj<typeof meta>;
 const Card = () => {
   return (
     <div style={{ padding: '4px 20px', backgroundColor: '#f0f0f0', borderRadius: '8px' }}>
-      <Heading style={{ color: '#333' }}>Meira and Anoushkha</Heading>
+      <Heading style={{ color: '#333' }}>The Motion Design Library You've Been Waiting For</Heading>
     </div>
   );
 };
