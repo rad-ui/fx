@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- `Dazzle` (`@radui/fx/Dazzle`): kinetic headline text with a beat wave, colour wave, sparkles and a swoosh; pure CSS, SSR-safe, respects reduced motion
 - Improved developer experience with new npm scripts
 - Added ESLint and Prettier configurations
 - Added detailed contribution guidelines

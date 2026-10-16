@@ -59,6 +59,33 @@ function MyComponent() {
 }
 ```
 
+### Dazzle
+
+A kinetic headline word: letters drop in one by one, then hop in a wave on every beat while a colour wave and glow run through them, with sparkles and a swoosh underneath. Pure CSS (no animation library at runtime), works with server rendering, and holds still under `prefers-reduced-motion`. Screen readers read the plain text.
+
+```jsx
+import Dazzle from "@radui/fx/Dazzle";
+
+<h1>
+  Make your marketing <Dazzle>dazzle.</Dazzle>
+</h1>
+
+// Your palette, a faster beat, fewer extras
+<Dazzle colors={["#34d399", "#22d3ee", "#a3e635", "#fde047"]} beat={1} sparkles={4} swoosh={false}>
+  fresh
+</Dazzle>
+```
+
+| Prop | Default | |
+| --- | --- | --- |
+| `colors` | blue, violet, pink, amber | Four colours the wave cycles through |
+| `beat` | `2` | Seconds between beats |
+| `sparkles` | `true` | `false`, or how many (up to 9) |
+| `swoosh` | `true` | Gradient underline that draws itself |
+| `delay` | `0` | Seconds before the letters drop in |
+
+Looks best on a dark background at display sizes. Uses `@property` and `color-mix()` (all current browsers).
+
 ### Motion Adapter Utilities
 
 Access motion adapter utilities:
