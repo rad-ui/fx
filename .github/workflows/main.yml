@@ -12,7 +12,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
-        node-version: [16.x, 18.x, 20.x]
+        node-version: [18.x, 20.x, 22.x]
 
     steps:
       - uses: actions/checkout@v3
@@ -28,6 +28,9 @@ jobs:
 
       - name: Lint
         run: npm run lint
+        env:
+          # ESLint 9 reads flat config by default; this repo still uses .eslintrc.js
+          ESLINT_USE_FLAT_CONFIG: 'false'
 
       - name: Test
         run: npm test

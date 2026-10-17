@@ -19,6 +19,11 @@
       "import": "./dist/fx/Fade/index.js",
       "require": "./dist/fx/Fade/index.js"
     },
+    "./Dazzle": {
+      "types": "./dist/fx/Dazzle/index.d.ts",
+      "import": "./dist/fx/Dazzle/index.js",
+      "require": "./dist/fx/Dazzle/index.js"
+    },
     "./Slide": {
       "types": "./dist/fx/Slide/index.d.ts",
       "import": "./dist/fx/Slide/index.js",
