@@ -74,15 +74,15 @@ const CSS = `
 `;
 
 let counter = 0;
-/** A stable id for the swoosh gradient: React's useId where it exists (18+), a counter before that. */
-const useGradientId = (): string => {
-  const useId = (React as unknown as { useId?: () => string }).useId;
-  if (useId) return `rad-dazzle-${useId().replace(/:/g, '')}`;
-  // eslint-disable-next-line react-hooks/rules-of-hooks -- the branch is fixed per React version
+const useCounterId = (): string => {
   const ref = React.useRef<string>();
-  if (!ref.current) ref.current = `rad-dazzle-${++counter}`;
+  if (!ref.current) ref.current = String(++counter);
   return ref.current;
 };
+/** A stable id for the swoosh gradient: React's useId where it exists (18+), a counter before that. */
+const useStableId: () => string =
+  (React as unknown as { useId?: () => string }).useId ?? useCounterId;
+const useGradientId = (): string => `rad-dazzle-${useStableId().replace(/:/g, '')}`;
 
 /**
  * Makes a word dazzle: letters drop in one by one, then hop in a wave on every beat while a colour
